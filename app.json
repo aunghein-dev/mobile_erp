@@ -7,7 +7,7 @@
     "scheme": "openwareerp",
     "primaryColor": "#1F6FEB",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/onlylogo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -24,7 +24,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/onlylogo.png",
         "backgroundColor": "#000000"
       },
       "softwareKeyboardLayoutMode": "resize",

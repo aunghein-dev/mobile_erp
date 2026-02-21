@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { render, type RenderOptions } from "@testing-library/react-native";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "@/shared/contexts/ThemeContext";
 import { LocaleProvider } from "@/shared/contexts/LocaleContext";
 import { createTestQueryClient } from "./createTestQueryClient";
@@ -12,11 +13,13 @@ export function renderWithProviders(ui: React.ReactElement, options?: CustomRend
 
   function Wrapper({ children }: PropsWithChildren) {
     return (
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider>
-          <LocaleProvider>{children}</LocaleProvider>
-        </ThemeProvider>
-      </QueryClientProvider>
+      <NavigationContainer>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider>
+            <LocaleProvider>{children}</LocaleProvider>
+          </ThemeProvider>
+        </QueryClientProvider>
+      </NavigationContainer>
     );
   }
 

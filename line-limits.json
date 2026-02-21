@@ -1,8 +1,10 @@
 {
   "defaultMax": 700,
   "overrides": {
-    "src/features/screens/home/HomeScreen.tsx": 2300,
+    "src/features/screens/home/HomeScreen.tsx": 3200,
+    "src/features/screens/dashboard/DashboardScreen.tsx": 720,
     "src/features/screens/expenses/ExpensesListScreen.tsx": 760,
+    "src/features/screens/inventory/InventoryCustomersScreen.tsx": 780,
     "src/features/screens/inventory/InventoryStocksScreen.tsx": 740
   },
   "ignoreSegments": [

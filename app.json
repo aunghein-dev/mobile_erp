@@ -1,8 +1,11 @@
 {
   "expo": {
-    "name": "erp_mobile",
+    "name": "Openware ERP",
     "slug": "erp_mobile",
+    "description": "Openware ERP mobile app for POS, inventory, customers, reports, and settings.",
     "version": "1.0.0",
+    "scheme": "openwareerp",
+    "primaryColor": "#1F6FEB",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,18 +16,58 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Openware uses the camera to scan barcodes.",
+        "NSPhotoLibraryUsageDescription": "Openware uses photos to upload product, logo, and profile images."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "softwareKeyboardLayoutMode": "resize",
+      "edgeToEdgeEnabled": false,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.erp_mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-localization",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Openware to access your camera for barcode scanning."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Openware to access your photos for uploads."
+        }
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "app": {
+        "displayName": "Openware ERP",
+        "tagline": "Retail POS, inventory, and reporting",
+        "company": "Openware Myanmar"
+      }
     }
   }
 }
